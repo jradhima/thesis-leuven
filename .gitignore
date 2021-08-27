@@ -1,0 +1,11 @@
+data.db
+
+tutorial/
+
+data/*
+
+!data/snp500.json
+
+.ipynb_checkpoints
+
+__pycache__
