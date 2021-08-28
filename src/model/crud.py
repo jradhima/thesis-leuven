@@ -35,9 +35,11 @@ def create_article(db: Session, title: str, text: str, href: str, date: str):
     db.add(db_article)
     db.commit()
     db.refresh(db_article)
-    return db_article
+    return db_article 
 
 def update_article(db: Session, db_article: models.Article, db_company: models.Company):
+    if db_company in db_article.companies:
+        return db_article
     db_article.companies.append(db_company)
     db.commit()
     db.refresh(db_article)
