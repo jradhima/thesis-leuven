@@ -5,6 +5,7 @@ import re
 class ArticleScraper:
     """
     A scraper object that can parse articles from multiple sources.
+    As of right now, correctly parses only marketwatch articles.
     """
     def __init__(self):
         self.s = HTMLSession()
