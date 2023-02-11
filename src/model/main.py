@@ -26,3 +26,6 @@ def add_article(ticker: str, title: str, text: str, href: str, date: str, db: Se
         db_article = crud.create_article(db=db, title=title, text=text, href=href, date=date)
     db_company = crud.get_company_by_ticker(db, ticker=ticker)
     return crud.update_article(db=db, db_article=db_article, db_company=db_company)
+
+def get_articles_by_date(date: str, db: Session = next(get_db())):
+    return crud.get_articles_by_date(db=db, date=date)

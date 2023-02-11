@@ -1,10 +1,10 @@
-data.db
+*.db
+
+*.json
 
 tutorial/
 
 data/*
-
-!data/snp500.json
 
 .ipynb_checkpoints
 
